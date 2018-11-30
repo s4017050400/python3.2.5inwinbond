@@ -1,0 +1,13 @@
+>>> import os
+>>> os.getcwd()
+'C:\\Users\\CKLu0\\Desktop\\Portable Python 3.2.5.1'
+>>> os.chdir('/Users/CKLu0/Desktop')
+>>> os.getcwd()
+'C:\\Users\\CKLu0\\Desktop'
+>>> f = open('a.txt')
+>>> print(f.read())
+
+
+---------------------------------
+
+cd C:\Users\CKLu0\Desktop\Portable Python 3.2.5.1\App

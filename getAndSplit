@@ -1,0 +1,12 @@
+import os
+import pandas as pd
+
+
+os.chdir('c:/users/user/desktop')
+f=open('test.txt')
+df=f.read()
+x=df.split('\n') "分開
+#y=pd.Series(x)
+y1 = [i.split('",') for i in x if len(i)>100 and i[0] != "="]
+#y=pd.Series(y1)
+frame=pd.DataFrame(y1)

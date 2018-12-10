@@ -24,7 +24,7 @@ output:
 
 y=pd.Series(x)
 frame['debt']=y
-
+_____________________________________________________________________  
 input:
 
 frame.rename(index=str, columns={"debt": "len"})
@@ -37,3 +37,41 @@ Output:
 3	Nevada	2001	2.4	6
 4	Nevada	2002	2.9	6
 5	Nevada	2003	3.2	6
+
+
+_____________________________________________________________________  
+input:
+        frame['state']
+Output: 
+        0      ohio
+        1      ohio
+        2      ohio
+        3    Nevada
+        4    Nevada
+        5    Nevada
+        Name: state, dtype: object
+_____________________________________________________________________  
+input:
+        frame['state'].get(3)
+Output: 
+        'Nevada'
+_____________________________________________________________________  
+input:
+        frame.iloc[3]
+Output: 
+        state    Nevada
+        year       2001
+        pop         2.4
+        debt          6
+        Name: 3, dtype: object
+_____________________________________________________________________        
+input:
+        frame == "Nevada"
+output:
+        state	year	pop	debt
+0	False	False	False	False
+1	False	False	False	False
+2	False	False	False	False
+3	True	False	False	False
+4	True	False	False	False
+5	True	False	False	False

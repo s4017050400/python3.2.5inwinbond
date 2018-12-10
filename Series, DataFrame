@@ -1,0 +1,39 @@
+import pandas as pd
+from pandas import Series, DataFrame
+data = {'state':['ohio','ohio','ohio','Nevada','Nevada','Nevada'],
+        'year':[2000,2001,2002,2001,2002,2003],
+        'pop':[1.5,1.7,3.6,2.4,2.9,3.2]}
+frame=pd.DataFrame(data)
+frame
+
+Output: 
+    state	year	pop
+0	ohio	  2000	1.5
+1	ohio	  2001	1.7
+2	ohio	  2002	3.6
+3	Nevada	2001	2.4
+4	Nevada	2002	2.9
+5	Nevada	2003	3.2
+
+x=[len(i) for i in frame['state']]
+
+input:
+      X
+output:    
+[4, 4, 4, 6, 6, 6]
+
+y=pd.Series(x)
+frame['debt']=y
+
+input:
+
+frame.rename(index=str, columns={"debt": "len"})
+
+Output: 
+    state	year	pop	len
+0	ohio	  2000	1.5	4
+1	ohio	  2001	1.7	4
+2	ohio	  2002	3.6	4
+3	Nevada	2001	2.4	6
+4	Nevada	2002	2.9	6
+5	Nevada	2003	3.2	6

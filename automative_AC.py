@@ -27,7 +27,7 @@ for i in f2:
                 del df[0]
             list2.append(df)
             list1=[] #清除list1
-            del_row_index = True
+            del_row_index = True    #開啟刪除訊號
         #print(x)
         #print(x[0],count)
         count += 1

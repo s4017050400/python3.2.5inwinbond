@@ -34,4 +34,6 @@ for i in f2:
         
 datas=pd.concat(list2,axis=1)
 #datas.set_index['0'] #選第一行當列名稱
-datas.to_csv('test.csv',encoding='utf_8_sig',header=False, index=False)        
+datas.to_csv('test.csv',encoding='utf_8_sig',header=False, index=False)  '最後會存成一個EXCEL檔
+
+
